@@ -2,9 +2,9 @@ n, m = map(int, input().split())
 b = [input().split() for _ in range(n)]
 result = 0
 for r in range(n):
-    cnt = 1
+    cnt = 0
     t = b[r][0]
-    for c in range(1, n):
+    for c in range(n):
         if b[r][c] == t:
             cnt += 1
         else:
@@ -14,9 +14,9 @@ for r in range(n):
             result += 1
             break
 for c in range(n):
-    cnt = 1
+    cnt = 0
     t = b[0][c]
-    for r in range(1, n):
+    for r in range(n):
         if b[r][c] == t:
             cnt += 1
         else:
