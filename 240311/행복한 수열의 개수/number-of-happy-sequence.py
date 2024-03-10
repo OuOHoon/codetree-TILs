@@ -7,22 +7,22 @@ for r in range(n):
     for c in range(1, n):
         if b[r][c] == t:
             cnt += 1
-            if cnt >= m:
-                result += 1
-                break
         else:
             cnt = 1
             t = b[r][c]
+        if cnt >= m:
+            result += 1
+            break
 for c in range(n):
     cnt = 1
     t = b[0][c]
     for r in range(1, n):
         if b[r][c] == t:
             cnt += 1
-            if cnt >= m:
-                result += 1
-                break
         else:
             cnt = 1
             t = b[r][c]
+        if cnt >= m:
+            result += 1
+            break
 print(result)
