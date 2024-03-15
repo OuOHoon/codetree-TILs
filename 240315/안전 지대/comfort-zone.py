@@ -15,7 +15,7 @@ def dfs(curr):
             visit[ny][nx] = True
             dfs((ny, nx))
 maxCnt = 0
-result = 0
+result = 1
 cnt = 0
 for k in range(1, maxK+1):
     visit = [[False] * m for _ in range(n)]
