@@ -23,6 +23,7 @@ for r in range(n):
             dfs((r, c))
             if c >= 4:
                 cnt += 1
-                maxSize = max(maxSize, c)
+            maxSize = max(maxSize, c)    
+
 
 print(cnt, maxSize)
