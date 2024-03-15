@@ -3,13 +3,9 @@ grid = [list(map(int, input().split())) for _ in range(n)]
 
 d = [(1, 0), (0, 1)]
 visit = [[False] * m for _ in range(n)]
-can = 0
+
 def dfs(curr):
     y, x = curr
-    if y == n-1 and x == m-1:
-        can = 1
-        return None
-        
     for dyx in d:
         dy, dx = dyx
         ny, nx = y + dy, x + dx
@@ -18,4 +14,4 @@ def dfs(curr):
             dfs((ny, nx))
 visit[0][0] = True
 dfs((0, 0))
-print(can)
+print(1 if visit[n-1][m-1] else 0)
