@@ -17,7 +17,7 @@ def dfs(curr):
 maxCnt = 0
 result = 0
 cnt = 0
-for k in range(1, maxK):
+for k in range(1, maxK+1):
     visit = [[False] * m for _ in range(n)]
     cnt = 0
     for r in range(n):
