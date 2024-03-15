@@ -15,15 +15,14 @@ def dfs(curr):
             c += 1
             dfs((ny, nx))
 
-for r in range(n):
-    for c in range(n):
-        if not visit[r][c]:
+for i in range(n):
+    for j in range(n):
+        if not visit[i][j]:
             c = 1
-            visit[r][c] = True
-            dfs((r, c))
+            visit[i][j] = True
+            dfs((i, j))
             if c >= 4:
                 cnt += 1
-            maxSize = max(maxSize, c)    
-
+            maxSize = max(maxSize, c)
 
 print(cnt, maxSize)
