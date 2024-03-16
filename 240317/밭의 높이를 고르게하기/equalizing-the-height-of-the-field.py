@@ -1,9 +1,11 @@
 n, h, t = map(int, input().split())
 heights = list(map(int, input().split()))
 result = 999999
-for i in range(n):
+for i in range(n - t + 1):
     cost = 0
-    for j in range(i, min(n, i + t)):
+    if i + t > n:
+        continue
+    for j in range(i, i + t):
         cost += abs(heights[j] - h)
     result = min(cost, result)
 print(result)
