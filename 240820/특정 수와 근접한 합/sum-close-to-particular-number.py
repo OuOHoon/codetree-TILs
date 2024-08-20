@@ -4,7 +4,7 @@ result = 100000
 maximun = sum(arr)
 
 for i in range(len(arr)-1):
-    for j in range(i ,len(arr)):
+    for j in range(i + 1,len(arr)):
         ex = maximun - (arr[i] + arr[j])
         result = min(result, abs(s - ex))
 print(result)
