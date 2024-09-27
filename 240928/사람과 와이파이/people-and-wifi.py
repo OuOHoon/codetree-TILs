@@ -2,17 +2,20 @@
 
 n, k = map(int, input().split())
 
-location = list(set(sorted(list(map(int, input().split())))))
+if (k >= n):
+    print(0)
+else:
+    location = list(set(sorted(list(map(int, input().split())))))
 
-result = location[-1] - location[0]
-temp_location = location[0]
-distances = []
-for idx, l in enumerate(location[1:]):
-    distances.append((idx, l - temp_location))
-    temp_location = l
-distances.sort(key=lambda x: x[1], reverse=True)
+    result = location[-1] - location[0]
+    temp_location = location[0]
+    distances = []
+    for idx, l in enumerate(location[1:]):
+        distances.append((idx, l - temp_location))
+        temp_location = l
+    distances.sort(key=lambda x: x[1], reverse=True)
 
-for i in range(k-1):
-    result -= distances[i][1]
+    for i in range(k-1):
+        result -= distances[i][1]
 
-print(result)
+    print(result)
